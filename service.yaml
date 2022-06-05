@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: todolist-service
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   selector:
     app: todolist
   ports:

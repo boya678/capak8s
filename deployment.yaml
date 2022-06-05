@@ -1,11 +1,11 @@
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
-  name: todolist-replicaset
+  name: todolist-deployment
   labels:
     app: todolist
 spec:
-  replicas: 2
+  replicas: 5
   selector:
     matchLabels:
       app: todolist

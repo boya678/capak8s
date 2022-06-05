@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: todolist-replicaset
+  labels:
+    app: todolist
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: todolist
+  template:
+    metadata:
+      labels:
+        app: todolist
+    spec:
+      containers:
+      - name: todolist
+        image: ranga/todolist
+        ports:
+          - containerPort: 80

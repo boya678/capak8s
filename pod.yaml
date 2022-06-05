@@ -8,6 +8,8 @@ spec:
   containers:
   - name: todolist
     image: ranga/todolist
+    ports:
+      - containerPort: 80
   - name: example
     image: busybox:1.28
     command: ['sh', '-c', 'echo ¡La aplicación se está ejecutando! && sleep 3600']

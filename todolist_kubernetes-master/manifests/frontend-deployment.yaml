@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: todolist
+  name: todolistmongodb
   labels:
-    app: todolist
+    app: todolistmongodb
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: todolist
+      app: todolistmongodb
   template:
     metadata:
       labels:
-        app: todolist
+        app: todolistmongodb
     spec:
       containers:
-      - name: todolist
+      - name: todolistmongodb
         image: tevolvers/todolist:1.7
         env:
           - name: DB_CONNECT

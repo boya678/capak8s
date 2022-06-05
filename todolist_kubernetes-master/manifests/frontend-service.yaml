@@ -5,9 +5,8 @@ metadata:
     app: todolist
   name: todolist
 spec:
-  type: LoadBalancer
   ports:
     - port: 80
       targetPort: 3000
   selector:
-    app: todolist
+    app: todolistmongodb

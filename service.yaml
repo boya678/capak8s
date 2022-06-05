@@ -3,7 +3,6 @@ kind: Service
 metadata:
   name: todolist-service
 spec:
-  type: LoadBalancer
   selector:
     app: todolist
   ports:
